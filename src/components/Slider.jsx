@@ -11,6 +11,7 @@ const Container = styled.div`
   display: flex;
   positions: relative;
   overflow: hidden;
+  color: black;
 `;
 
 const Wrapper = styled.div`
@@ -50,6 +51,9 @@ const Slide = styled.div`
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
+  margin-top: 7%;
+  margin-left: 5%;
+
 `;
 
 const Image = styled.img`
@@ -75,14 +79,15 @@ const Desc = styled.p`
 const Button = styled.button`
   padding: 10px;
   font-size: 20px;
-  background-color: transparent;
+  background-color: #AE4CCF;
+  color: white;
   cursor: pointer;
 `;
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
-    if (direction === "right") {
+    if (direction === "left") {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
       
     } else {
@@ -106,7 +111,7 @@ const Slider = () => {
           <InfoContainer>
             <Title>{item.title}</Title>
             <Desc>{item.desc}</Desc>
-            <Button>SHOW NOW</Button>
+            <Button>ADOPT NOW</Button>
           </InfoContainer>
           </Slide>
         ))}

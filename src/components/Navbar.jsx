@@ -1,11 +1,13 @@
 import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import { PetsOutlined, Search } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
   height: 60px;
-  background-color: red;
+  background-color: #e6cca9;
+  color: #533535;
+  font-weight: 500;
 `;
 
 const Wrapper = styled.div`
@@ -21,21 +23,15 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-`;
-
 const SearchContainer = styled.div`
-  ${"" /* border: 0.5px solid white; */}
   display: flex;
   align-items: center;
   margin-left: 25px;
-  padding: 5px;
+  padding: 10px;
 `;
 
 const Input = styled.input`
-  border: none;
+padding: 2%;
 `;
 
 const Center = styled.div`
@@ -43,9 +39,8 @@ const Center = styled.div`
   text-align: center;
 `;
 
-const Logo = styled.h1`
-  font-weight: bold;
-  color: white;
+const Logo = styled.img`
+  height: 40px;
 `;
 
 const Right = styled.div`
@@ -59,6 +54,7 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  color: black;
 `;
 
 const Navbar = () => {
@@ -66,23 +62,20 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>En</Language>
-          <SearchContainer>
-            <Input />
-            <Search style={{color: "gray", fontSize: "16px"}}/>
-          </SearchContainer>
+          <Logo src="/pictures/HiDoggy.png" />
         </Left>
-        <Center>
-          <Logo>INSTABOX</Logo>
-        </Center>
+        <Center></Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>CONTACT</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="secondary">
-              <ShoppingCartOutlined />
+            <Badge badgeContent={3} color="secondary">
+              <PetsOutlined />
             </Badge>
           </MenuItem>
+          <SearchContainer>
+            <Input />
+            <Search style={{ color: "gray", fontSize: "25px", marginLeft: "3%"}} />
+          </SearchContainer>
         </Right>
       </Wrapper>
     </Container>
