@@ -71,8 +71,8 @@ const Title = styled.h1`
 
 const Desc = styled.p`
   margin: 50px 0px;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 900;
   letter-spacing: 3px;
 `;
 

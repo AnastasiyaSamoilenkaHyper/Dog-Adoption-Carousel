@@ -55,6 +55,7 @@ const MenuItem = styled.div`
   cursor: pointer;
   margin-left: 25px;
   color: black;
+  font-weight: bold;
 `;
 
 const Navbar = () => {
