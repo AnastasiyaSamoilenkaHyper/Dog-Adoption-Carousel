@@ -2,12 +2,15 @@ import { Badge } from "@material-ui/core";
 import { PetsOutlined, Search } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
   background-color: #e6cca9;
   color: #533535;
   font-weight: 500;
+
+  ${mobile({ height: "50px" })};
 `;
 
 const Wrapper = styled.div`
@@ -15,6 +18,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mobile({ padding: "10px 0" })};
+
 `;
 
 const Left = styled.div`
@@ -31,7 +36,9 @@ const SearchContainer = styled.div`
 `;
 
 const Input = styled.input`
-padding: 2%;
+  padding: 2%;
+  ${mobile({ width: "60px" })};
+
 `;
 
 const Center = styled.div`
@@ -41,6 +48,8 @@ const Center = styled.div`
 
 const Logo = styled.img`
   height: 40px;
+  ${mobile({ height: "26px", marginLeft: "15px" })};
+
 `;
 
 const Right = styled.div`
@@ -48,6 +57,8 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({flex: 2, justifyContent: "space-between" })};
+
 `;
 
 const MenuItem = styled.div`
@@ -56,6 +67,9 @@ const MenuItem = styled.div`
   margin-left: 25px;
   color: black;
   font-weight: bold;
+
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })};
+
 `;
 
 const Navbar = () => {
@@ -74,8 +88,10 @@ const Navbar = () => {
             </Badge>
           </MenuItem>
           <SearchContainer>
-            <Input />
-            <Search style={{ color: "gray", fontSize: "25px", marginLeft: "3%"}} />
+            <Input placeholder="Search"/>
+            <Search
+              style={{ color: "gray", fontSize: "25px", marginLeft: "3%" }}
+            />
           </SearchContainer>
         </Right>
       </Wrapper>
